@@ -1,12 +1,9 @@
 require('dotenv').config();
 
 const express = require('express');
-const connectDB = require('./db/connectDB'); // chemin relatif correct
 
 const app = express();
-const port = process.env.PORT || 3000;
-
-connectDB(); // lance la connexion à MongoDB
+const port = process.env.PORT || 4002;
 
 app.use(express.json());
 
