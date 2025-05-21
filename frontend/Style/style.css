@@ -1,0 +1,166 @@
+html, body {
+	height: 100%;
+	margin: 0;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+main {
+	padding-top: 0.5rem;
+  }
+footer {
+	margin-top: auto; /* pousse le footer en bas uniquement si nécessaire */
+	height: 100px;
+}
+
+/* Boutons */
+*   {
+	box-sizing: border-box;
+	/*border-radius: 20px;*/
+	height: auto;
+}
+
+.column {
+	float: left;
+	width: 33.33%;
+	padding: 5px;
+  }
+  
+/* Clearfix (clear floats) */
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.column .picture_style_01 {
+	height: 95%;
+	width: 95%;
+	margin: auto;
+	opacity: 0.3; /* transparence */
+	object-fit: cover;
+	border-radius: 15px;
+}
+
+.copyright_footer {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.logo_style
+{
+    margin-right: 10px;
+	border-radius: 20px;
+}
+
+.bandeau {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 250px;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	opacity: 0.25; /* transparence */
+	z-index: -1; /* derrière le contenu */
+
+/* Effet estompé sur le bord droit */
+-webkit-mask-image: linear-gradient(to right, black 15%, transparent 100%);
+mask-image: linear-gradient(to right, black 15%, transparent 100%);
+}
+
+.list-group-item {
+	border: 1px solid #ccc;        /* fine bordure grise */
+	border-radius: 5px;            /* coins arrondis */
+	padding: 5px;                 /* espace intérieur */
+	margin-bottom: 5px;           /* espace entre les lignes */
+	background-color: #f9f9f9;     /* fond légèrement coloré */
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.05); /* ombrage léger */
+  }
+
+.texte_01 {
+	box-sizing: border-box;
+	border-radius: 20px;
+	height: auto;
+	color: green;
+	text-align: center;
+}
+
+.picture_style_02 {
+	height: 95%;
+	width: 95%;
+	margin: auto;
+	opacity: 0.3; /* transparence */
+	object-fit: cover;
+	border-radius: 15px;
+}
+
+.image-wrapper {
+	position: relative;
+	text-align: center;
+  }
+
+.image-wrapper img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.centered-button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.zoomable {
+	transition: transform 0.3s ease, opacity 0.3s ease;
+	cursor: zoom-in;
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 10px auto;
+	opacity: 0.25;
+  }
+
+.zoomed {
+	transform: scale(2);
+	cursor: zoom-out;
+	z-index: 10;
+	position: relative;
+	opacity: 1;
+  }
+
+.picture_style_03 {
+	height: 200px;
+	width: 200px;
+	margin: auto;
+	opacity: 1;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+input[type=text] {
+	min-width: 207px;
+  }
+
+  input[type=date] {
+	min-width: 207px;
+  }
+.input_long {
+	width: 420px;
+  }
+ 
+nav ul li
+{
+ margin:0 10px; 
+}
+
+.card {
+  border-radius: 30px !important;
+  overflow: hidden !important;
+}

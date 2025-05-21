@@ -1,0 +1,9 @@
+xampp
+
+
+mysql -u root -p
+T*******1!
+
+show databases;
+
+source D:\0. WINDOWS\USER\DOCUMENTS\BOULOT\1. DIPLOMES\4. DEVELOPPEUR\3. EXAMENS\ECF\3. DEMO 1\sql\schema.sql

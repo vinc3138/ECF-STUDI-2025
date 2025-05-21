@@ -1,0 +1,24 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "TestDB",
+            "username": "root",
+            "database": "ecoride",
+            "password": "Toulouse31!"
+        }
+    ]
+
+    {
+        "php.validate.executablePath": "C://xampp//php//php.exe",
+        "php.validate.run": "onType"
+    }
+
+}

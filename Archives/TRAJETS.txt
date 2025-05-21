@@ -1,0 +1,24 @@
+INSERT INTO `trajets` ('id', 'utilisateur_id', 'depart', 'destination', 'date') VALUES
+(1, 1, 'Lyon', 'Paris', '22/05/2025'),
+(2, 1, 'Paris', 'Lyon', '25/05/2025'),
+(3, 3, 'Nantes', 'Paris', '25/05/2025'),
+(4, 2, 'Toulouse', 'Paris', '26/05/2025')
+
+INSERT INTO `trajets` VALUES
+(1, 1, 'Lyon', 'Paris', '2025/05/24'),
+(2, 1, 'Paris', 'Lyon', '2025/05/25'),
+(3, 3, 'Nantes', 'Paris', '2025/05/26'),
+(4, 2, 'Toulouse', 'Paris', '2025/05/27')
+
+
+
+INSERT INTO trajets VALUES (1, 1, "Paris", "Toulouse", "2025/02/01");
+
+
+
+INSERT INTO utilisateurs VALUES (1, 'BRILOT', 'Alfred', 'abrilot@gmail.com', 'abrilot');
+
+
+INSERT INTO utilisateurs ('id', 'nom', 'prenom', 'email', 'mot_de_passe') VALUES
+(2, 'LIES', 'Driss', 'dlies@hotmail.fr','1234'),
+(3, 'RICHARD', 'Magalie', 'mrichard@hotmail.fr','mdp2025')

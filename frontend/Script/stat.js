@@ -1,0 +1,1 @@
+fetch('/backend/controllers/admin_stats.php')

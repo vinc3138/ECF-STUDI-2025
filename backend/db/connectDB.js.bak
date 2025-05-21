@@ -1,0 +1,28 @@
+// backend/db/connectDB.js
+
+require('dotenv').config(); // Charge le fichier .env
+
+const mongoose = require('mongoose');
+
+const mongoURI = process.env.MONGODB_URI;
+
+const connectDB = async () => {
+  if (!mongoURI) {
+    console.error('❌ MONGODB_URI non défini dans .env');
+    process.exit(1);
+  }
+
+  try {
+    await mongoose.connect(mongoURI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log('✅ MongoDB connecté avec succès');
+  } catch (error) {
+    console.error('❌ Erreur de connexion MongoDB :', error.message);
+    process.exit(1);
+  }
+};
+
+module.exports = connectDB;
+

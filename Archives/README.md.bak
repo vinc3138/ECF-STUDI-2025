@@ -1,0 +1,32 @@
+
+# EcoRide - Plateforme de covoiturage écoresponsable
+
+## Technologies utilisées
+- HTML/CSS/Bootstrap
+- PHP (avec PDO pour MySQL)
+- MySQL (relationnel) + MongoDB (avis, logs)
+
+## Structure
+- `frontend/` : Pages HTML (accueil, connexion, inscription, recherche)
+- `backend/` : Scripts PHP pour la gestion des utilisateurs et des trajets
+- `sql/schema.sql` : Script de création de la base de données MySQL
+- `docs/avis.json`, `docs/logs.json` : Données MongoDB
+- `README.md` : Ce fichier
+
+## Instructions d'installation
+
+1. Cloner ou décompresser le dossier sur un serveur local (ex : XAMPP, WAMP)
+2. Importer le fichier `sql/schema.sql` dans MySQL
+3. S'assurer que MongoDB est actif et injecter les fichiers `avis.json` et `logs.json`
+   ```bash
+   mongoimport --db ecoride --collection avis --file docs/avis.json --jsonArray
+   mongoimport --db ecoride --collection logs --file docs/logs.json --jsonArray
+   ```
+4. Lancer l'application dans le navigateur via `localhost/ecoride_project/frontend/index.html`
+
+## Sécurité
+- Les mots de passe sont hashés avec `password_hash()`
+- Prévoir CSRF + validations plus poussées pour la mise en production
+
+## Auteurs
+- Projet académique réalisé par [Votre nom]

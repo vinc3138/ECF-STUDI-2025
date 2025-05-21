@@ -1,0 +1,44 @@
+import express, { Request, Response } from 'express';
+import { Pool } from 'pg';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+const app = express();
+const port = process.env.PORT || 3000;
+
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+});
+
+pool.connect()
+  .then(() => console.log('✅ Connexion PostgreSQL réussie'))
+  .catch((err) => {
+    console.error('❌ Erreur de connexion PostgreSQL :', err);
+    process.exit(1);
+  });
+
+app.use(express.json());
+
+app.get('/', (_req: Request, res: Response) => {
+  res.send('Bienvenue sur l’API de covoiturage 🚗');
+});
+
+app.get('/health', (_req: Request, res: Response) => {
+  res.status(200).send('OK');
+});
+
+app.get('/users', async (_req: Request, res: Response) => {
+  try {
+    const result = await pool.query('SELECT * FROM users');
+    res.json(result.rows);
+  } catch (err) {
+    console.error('Erreur requête /users :', err);
+    res.status(500).send('Erreur serveur');
+  }
+});
+
+app.listen(port, () => {
+  console.log(`🚀 Serveur lancé sur le port ${port}`);
+});
