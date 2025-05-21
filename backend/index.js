@@ -22,6 +22,3 @@ app.get('/health', (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
-
-const covoituragesRoutes = require('../routes/covoiturage');
-app.use('/api/covoiturage', covoiturageRoutes);
