@@ -23,5 +23,5 @@ app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
 
-const covoituragesRoutes = require('./routes/covoiturages');
-app.use('/api/covoiturages', covoituragesRoutes);
+const covoituragesRoutes = require('../routes/covoiturage');
+app.use('/api/covoiturage', covoiturageRoutes);
