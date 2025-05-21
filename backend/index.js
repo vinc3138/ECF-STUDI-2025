@@ -103,7 +103,7 @@ app.get('/ajouter-exemples', async (req, res) => {
   }
 });
 
-const PORT = 4000; // port différent de 3000 pour éviter conflit
+const PORT = 4001; // port différent de 3000 pour éviter conflit
 app.listen(PORT, () => {
   console.log(`🚀 API lancée sur http://localhost:${PORT}`);
 });
